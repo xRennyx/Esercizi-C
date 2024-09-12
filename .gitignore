@@ -1,52 +1,32 @@
-# Prerequisites
-*.d
-
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+int main()
+{
+	int a;
+	int b;
+	float rapporto;
+	
+	do
+	{
+		printf("Inserisci primo numero: ");
+		scanf("%d", &a);
+		printf("Inseisci secondo numero: ");
+		scanf("%d", &b);
+		
+		if(a!=0 && b!=0)
+		{
+			if(a<=b)
+			{
+				rapporto= (float)a/b;
+			}
+			else if(b<=a)
+			{
+				rapporto=(float)b/a;
+				
+			}
+			printf("Il rapporto e': %.2f\n", rapporto);
+			
+		}
+		
+	}while(a!=0 && b!=0);
+	
+	return 0;
+}
