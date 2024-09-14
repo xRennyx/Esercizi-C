@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+	int a;
+	int b;
+	int somma=0;
+	int prodotto;
+	
+	do
+	{
+		printf("Inserisci primo numero: ");
+		scanf("%d", &a);
+		printf("Inserisci secondo numero: ");
+		scanf("%d", &b);
+		
+		if(a!=0 && b!=0)
+		{
+			prodotto=a*b;
+			
+			printf("Prodotto: %d\n", prodotto);
+			
+			somma=somma+prodotto;	
+		}	
+	}while(a!=0 && b!=0);
+	
+	printf("La somma dei prodotti e': %d", somma);
+	
+return 0;
+}
