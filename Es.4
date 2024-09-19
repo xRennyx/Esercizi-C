@@ -26,8 +26,11 @@ int main()
         
         
         printf("Rapporto: %.2f\n", rapporto);
-        printf("Radice: %.2f\n", sqrt(rapporto));
-        
+        radice=sqrt(rapporto);
+        if(rapporto>=0)
+        {
+            printf("Radice: %.2f\n", sqrt(rapporto));
+        }
     }while(radice>=0);
     
     printf("Impossibile fare la radice di un numero negativo");
