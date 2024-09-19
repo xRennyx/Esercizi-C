@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float a;
+    float b;
+    float rapporto;
+    float radice=0;
+    
+    do
+    {
+        printf("Inserisci primo numero: ");
+        scanf("%f", &a);
+        printf("Inserisci secondo numero: ");
+        scanf("%f", &b);
+        
+        if(a>b)
+        {
+            rapporto=a/b;
+        }
+        else
+        {
+            rapporto=b/a;
+        }
+        
+        
+        printf("Rapporto: %.2f\n", rapporto);
+        printf("Radice: %.2f\n", sqrt(rapporto));
+        
+    }while(radice>=0);
+    
+    printf("Impossibile fare la radice di un numero negativo");
+    
+
+    return 0;
+}
