@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    int b;
+    int c;
+    int diff;
+    int diffpari=0;
+    int diffdispari=0;
+    int nullo=0;
+    
+    do
+    {
+        printf("Inserisci a: ");
+        scanf("%d", &a);
+        printf("Inserisci b: ");
+        scanf("%d", &b);
+        printf("Inserisci c: ");
+        scanf("%d", &c);
+        diff=a-b;
+        
+        if(diff>=0)
+        {
+            if(diff==0)
+            {
+                nullo++;
+            }
+            if(diff % 2 ==0)
+            {
+                diffpari++;
+            }
+            else
+            {
+                diffdispari++;
+            }
+        }
+        
+    }while(a+b>=c);
+    printf("Nulli: %d\nPari: %d volte\nDispari: %d volte", nullo, diffpari, diffdispari);
+}
