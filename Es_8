@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float radice;
+    int num;
+    float somma=0;
+
+    do
+    {
+        printf("Inserisci un numero: ");
+        scanf("%d", &num);
+        if(num>=0)
+        {
+            radice=sqrt(num);
+            printf("La radice è %.2f\n", radice);
+            somma=(float)somma+radice;
+        }
+    }while(num>=0);
+    printf("Hai inserito un numero negativo\n");
+    printf("La somma delle radici e': %.2f", somma);
+    
+return 0;    
+}
