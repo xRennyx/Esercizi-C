@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char *argv[])
+{
+    int scelta;
+    int contBevande = 0; 
+    int contRistorazione = 0;
+    float importo; 
+    float sommaBevande = 0; 
+    float sommaRistorazione = 0; 
+    float mediaBevande = 0; 
+    float mediaRistorazione = 0;
+    char esci[10];
+    
+    do {
+        printf("Inserisci le consumazioni servite (1 per bevande, 2 per ristorazione):\n");
+        scanf("%d", &scelta);
+        
+        printf("Inserisci l'importo della consumazione:\n");
+        scanf("%f", &importo); 
+        
+        if (scelta == 1) {
+            sommaBevande = sommaBevande + importo;
+            contBevande++;
+        } else if (scelta == 2) {
+            sommaRistorazione = sommaRistorazione + importo;
+            contRistorazione++;
+        } else {
+            printf("Scelta non valida!\n");
+        }
+        
+        printf("Inserisci 'esci' se vuoi visualizzare lo scontrino, oppure scrivi una lettera per continuare:\n");
+        scanf("%s", esci);
+        
+    } while (strcmp(esci, "esci") != 0);
+    
+    if (contBevande > 0) {
+        mediaBevande = sommaBevande / contBevande;
+        printf("Media importo bevande: %.2f\n", mediaBevande);
+    } else {
+        printf("Non sono state vendute bevande.\n");
+    }
+    
+    if (contRistorazione > 0) {
+        mediaRistorazione = sommaRistorazione / contRistorazione;
+        printf("Media importo ristorazione: %.2f\n", mediaRistorazione);
+    } else {
+        printf("Non sono state vendute ristorazioni.\n");
+    }
+    
+    if (contBevande > contRistorazione) {
+        printf("Sono state vendute più bevande.\n");
+    } else if (contRistorazione > contBevande) {
+        printf("Sono state vendute più ristorazioni.\n");
+    } else {
+        printf("Sono state vendute lo stesso numero di bevande e ristorazioni.\n");
+    }
+    
+    return 0;
+}
