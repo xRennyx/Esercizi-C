@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    int N;
+    int x=0;
+    
+    do
+    {
+        printf("Inserisci N: ");
+        scanf("%d", &N);
+    } while (N<=0);
+
+    for(int i=1; i<=N; i++)
+    {
+        if(N%i==0)
+        {
+            x++;
+        }
+    }
+    if(x==2)
+    {
+        printf("Il numero è primo");
+    }
+    else
+    {
+        printf("Il numero non è primo");
+    }
+    
+ 
+return 0;    
+}
