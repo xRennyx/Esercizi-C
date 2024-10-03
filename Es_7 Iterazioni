@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    int N;
+    int precedente;
+    do
+    {
+        printf("Inserisci N: ");
+        scanf("%d", &N);
+    }while(N<1);
+
+    precedente=N-1;
+
+    printf("Il numero precedente vale: %d", precedente);
+ 
+return 0;    
+}
