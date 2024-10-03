@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    int S1;
+    int S;
+    int M;
+    int H;
+    
+    printf("Inserisci la misura in secondi: ");
+    scanf("%d", &S1);
+
+    M=S1/60;
+    S=S1%60;
+    H=M/60;
+    if(H!=0)
+    {
+        M=M%60;
+    }
+
+    printf("Orario: %dh %dm %ds",H, M, S);
+ 
+return 0;    
+}
