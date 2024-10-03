@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    int N;
+    int somma=0;
+    do
+    {
+        printf("Inserisci N: ");
+        scanf("%d", &N);
+    }while(N<1);
+
+    for(int i=0; i<=N; i++)
+    {
+        if(i%2==0)
+        {
+            somma=somma+i;
+        }    
+    }
+    printf("Somma dei primi %d numeri pari: %d", N, somma);
+ 
+return 0;    
+}
