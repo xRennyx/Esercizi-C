@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(int argc, char *argv[])
+{
+    int N1;
+    int N2;
+    
+    do
+    {
+        printf("Inserisci N1: ");
+        scanf("%d", &N1);
+        printf("Inserisce N2: ");
+        scanf("%d", &N2);
+    }while(N1<=0 || N2<=0);
+    
+    if(sqrt(N1)==N2)
+    {
+        printf("N1 è il quadrato di N2");
+    }
+    else
+    {
+        printf("N1 non è il quadrato di N2");
+    }
+return 0;
+}
