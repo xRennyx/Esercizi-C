@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main(int argc, char *argv[])
+{
+    int dim;
+    do
+    {
+        printf("Inserisci la dimesnione: ");
+        scanf("%d", &dim);
+    }while(dim<=0);
+    
+    int array[dim];
+    
+    for(int i=0; i<dim; i++)
+    {
+        printf("Inserisci n°%d: ",i+1);
+        scanf("%d", &array[i]);
+    }
+    
+    for(int i=0; i<dim; i++)
+    {
+        printf(" %d", array[i]);
+    }
+    if(dim%2==0)
+    {
+        printf("Vettore Pari");
+    }
+    else
+    {
+        printf("vettore dispari");
+    }
+	return 0;
+}
