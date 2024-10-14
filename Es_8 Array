@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    int dim;
+    int i=0;
+    float media;
+    int numero;
+    int somma=0;
+    do
+    {
+        printf("Inserisci dimensione del vettore: ");
+        scanf("%d", &dim);
+    }while(dim<=0);
+    
+    int n[dim];
+    
+    do
+    {
+        printf("Inserisci un numero: ");
+        scanf("%d", &numero);
+        n[i]=numero;
+        somma=somma+numero;
+        i++;
+    }while(numero!=0 && i<dim);
+    
+    media=(float)somma/dim;
+    printf("Media: %.2f\n", media);
+    
+    for(int i=dim-1; i>=0; i--)
+    {
+        if(n[i]>media)
+        {
+            printf("%d ", n[i]);
+        }
+    }
+
+return 0;
+}
