@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+void scambio(int *a, int *b)
+{
+    int scambio= *a;
+    *a=*b;
+    *b=scambio;
+    
+}
+int main(int argc, char *argv[])
+{
+    int n1;
+    int n2;
+    
+    printf("Inserisci primo numero: ");
+    scanf("%d", &n1);
+    printf("Inserisci secondo numero: ");
+    scanf("%d", &n2);
+    
+    scambio(&n1, &n2);
+    
+    printf("N1 vale: %d\n", n1);
+    printf("N2 vale: %d", n2);
+    
+return 0;    
+}
