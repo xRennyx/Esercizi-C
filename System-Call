@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     fd = open(argv[1], O_RDONLY);
     if (fd < 0) 
     {
-        perror("Errore nell'apertura del file");
+        printf("Errore nell'apertura del file");
         exit(1);
     }
 
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 
     if (nread < 0)
     {
-        perror("Errore nella lettura del file");
+        printf("Errore nella lettura del file");
     }
 
     close(fd);
