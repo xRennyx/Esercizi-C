@@ -7,7 +7,7 @@
 int main() {
     int dim = 3;
     int v[dim];
-    int p2, p3, p4, p5, p6;
+    pid_t p2, p3, p4, p5, p6;
 
     printf("P1: mio PID=%d, sto generando il vettore V[]\n", getpid());
     for (int i = 0; i < dim; i++) {
@@ -31,6 +31,7 @@ int main() {
             printf("P4: il prodotto delle componenti di V[] è %d\n", prodotto);
             exit(0);
         }
+        wait(&p4);
 
         // P2 genera P5
         p5 = fork();
@@ -46,8 +47,7 @@ int main() {
             exit(0);
         }
 
-        wait(NULL);
-        wait(NULL);
+        wait(&p5);
         exit(0);
     }
 
@@ -75,18 +75,14 @@ int main() {
             exit(somma);
         }
         int status;
-        waitpid(p6, &status, 0);
-        if (WIFEXITED(status)) {
-            int risultato = WEXITSTATUS(status);
-            printf("P3: il risultato calcolato da P6 è %d\n", risultato);
-        }
+        wait(&status);
+        int risultato = WEXITSTATUS(status);
+        printf("P3: il risultato restituito da P6 = %d\n", risultato);
         exit(0);
     }
+    wait(&p2);
+    wait(&p3);
 
-    // P1 attende P2 e P3
-    wait(NULL);
-    wait(NULL);
-
-    printf("P1: tutti i processi figli hanno terminato");
+    printf("P1: tutti i processi figli hanno terminato\n");
     return 0;
 }
