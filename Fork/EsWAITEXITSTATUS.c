@@ -7,7 +7,7 @@
 int main() {
     int dim = 3;
     int v[dim];
-    pid_t p2, p3, p4, p5, p6;
+    int p2, p3, p4, p5, p6;
 
     printf("P1: mio PID=%d, sto generando il vettore V[]\n", getpid());
     for (int i = 0; i < dim; i++) {
