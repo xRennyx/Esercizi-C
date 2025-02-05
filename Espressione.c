@@ -17,9 +17,6 @@
    "P: quello che P deve visualizzare"
 */
 
-//Autore: Giacomo Redi
-//Data: 6/02/2025
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
